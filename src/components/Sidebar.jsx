@@ -66,34 +66,7 @@ function Sidebar() {
           </div>
         </div>
 
-        <div className="sidebar-footer">
-          <div className="app-info">
-            <h4>Project 6 Features</h4>
-            <p>Enhanced brewery dashboard with interactive visualizations and detailed views.</p>
-            <div className="features-list">
-              <div className="feature-item">
-                <span className="feature-icon">🔍</span>
-                <span>Advanced Search & Filtering</span>
-              </div>
-              <div className="feature-item">
-                <span className="feature-icon">📊</span>
-                <span>Interactive Charts</span>
-              </div>
-              <div className="feature-item">
-                <span className="feature-icon">🔗</span>
-                <span>Detailed Brewery Views</span>
-              </div>
-              <div className="feature-item">
-                <span className="feature-icon">🚀</span>
-                <span>React Router Navigation</span>
-              </div>
-              <div className="feature-item">
-                <span className="feature-icon">📱</span>
-                <span>Responsive Design</span>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </nav>
     </aside>
   );

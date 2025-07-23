@@ -131,50 +131,7 @@
   color: #9ca3af;
 }
 
-.sidebar-footer {
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid #374151;
-}
 
-.app-info {
-  background-color: rgba(55, 65, 81, 0.3);
-  border-radius: 0.5rem;
-  padding: 1rem;
-  border: 1px solid rgba(75, 85, 99, 0.3);
-}
-
-.app-info h4 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #f9fafb;
-  margin-bottom: 0.5rem;
-}
-
-.app-info p {
-  font-size: 0.875rem;
-  color: #d1d5db;
-  line-height: 1.4;
-  margin-bottom: 1rem;
-}
-
-.features-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.feature-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.8rem;
-  color: #9ca3af;
-}
-
-.feature-icon {
-  font-size: 1rem;
-}
 
 /* Custom scrollbar */
 .sidebar::-webkit-scrollbar {
