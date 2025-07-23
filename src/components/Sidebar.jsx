@@ -30,6 +30,15 @@ function Sidebar() {
               <span className="nav-text">Dashboard</span>
             </Link>
           </li>
+          <li>
+            <Link 
+              to="/analysis" 
+              className={`nav-link ${isActive('/analysis') ? 'active' : ''}`}
+            >
+              <span className="nav-icon">📈</span>
+              <span className="nav-text">Data Analysis</span>
+            </Link>
+          </li>
         </ul>
 
         <h3 className="nav-section-title">Quick Stats</h3>

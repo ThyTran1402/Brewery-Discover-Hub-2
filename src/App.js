@@ -4,6 +4,7 @@ import './App.css';
 import Sidebar from './components/Sidebar';
 import DetailView from './components/DetailView';
 import DataVisualization from './components/DataVisualization';
+import DataAnalysisPage from './components/DataAnalysisPage';
 import SearchBar from './components/SearchBar';
 import CategoryFilter from './components/CategoryFilter';
 import StateFilter from './components/StateFilter';
@@ -238,6 +239,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/brewery/:id" element={<DetailView breweries={breweries} />} />
+          <Route path="/analysis" element={<DataAnalysisPage breweries={breweries} />} />
         </Routes>
       </div>
     </Router>
