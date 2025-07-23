@@ -1,0 +1,25 @@
+.state-filter-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.state-filter-container .filter-select {
+  background-color: #fafafa;
+  border-color: #e5e7eb;
+}
+
+.state-filter-container .filter-select:focus {
+  background-color: white;
+  border-color: #3b82f6;
+}
+
+.state-filter-container .filter-select:hover {
+  background-color: white;
+  border-color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+  .state-filter-container {
+    width: 100%;
+  }
+} 
