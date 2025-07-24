@@ -6,6 +6,7 @@ function SearchBar({ onSearchChange }) {
 
   const handleInputChange = (e) => {
     const value = e.target.value;
+    console.log('SearchBar input changed:', value); // Debug log
     setSearchTerm(value);
     onSearchChange(value);
   };

@@ -6,6 +6,7 @@ function CityFilter({ onCityFilterChange }) {
 
   const handleInputChange = (e) => {
     const value = e.target.value;
+    console.log('CityFilter input changed:', value); // Debug log
     setCityTerm(value);
     onCityFilterChange(value);
   };

@@ -9,6 +9,25 @@ function Statistics({ breweries, filteredBreweries }) {
   const allBreweries = breweries;
   const displayedBreweries = filteredBreweries || breweries;
 
+  // Handle case when filtered results are empty
+  if (displayedBreweries.length === 0) {
+    return (
+      <div className="statistics-container">
+        <h2>📊 Brewery Statistics</h2>
+        <div className="filter-info">
+          No breweries match your current filters. Try adjusting your search criteria.
+        </div>
+        <div className="stats-grid">
+          <div className="stat-card">
+            <div className="stat-number">0</div>
+            <div className="stat-label">Filtered Results</div>
+            <div className="stat-description">{allBreweries.length} total breweries</div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   // Calculate statistics for all breweries
   const totalBreweries = allBreweries.length;
   const filteredCount = displayedBreweries.length;
@@ -20,9 +39,11 @@ function Statistics({ breweries, filteredBreweries }) {
     return acc;
   }, {});
   
-  const mostCommonType = Object.entries(typeCount).reduce((a, b) => 
-    typeCount[a[0]] > typeCount[b[0]] ? a : b
-  );
+  const mostCommonType = Object.entries(typeCount).length > 0 
+    ? Object.entries(typeCount).reduce((a, b) => 
+        typeCount[a[0]] > typeCount[b[0]] ? a : b
+      )
+    : ['No data', 0];
 
   // Most common state/province in filtered results
   const stateCount = displayedBreweries.reduce((acc, brewery) => {
@@ -31,9 +52,11 @@ function Statistics({ breweries, filteredBreweries }) {
     return acc;
   }, {});
   
-  const mostCommonState = Object.entries(stateCount).reduce((a, b) => 
-    stateCount[a[0]] > stateCount[b[0]] ? a : b
-  );
+  const mostCommonState = Object.entries(stateCount).length > 0
+    ? Object.entries(stateCount).reduce((a, b) => 
+        stateCount[a[0]] > stateCount[b[0]] ? a : b
+      )
+    : ['No data', 0];
 
   // Count breweries by country in filtered results
   const countryCount = displayedBreweries.reduce((acc, brewery) => {
